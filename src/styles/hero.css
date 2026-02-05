@@ -1,0 +1,32 @@
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: var(--gold);
+}
+
+.hero p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.outline-btn {
+  border: 2px solid var(--gold);
+  padding: 0.8rem 1.5rem;
+  color: var(--gold);
+}

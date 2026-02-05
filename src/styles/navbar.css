@@ -1,0 +1,20 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: var(--black);
+  border-bottom: 1px solid var(--gold);
+}
+
+.navbar h2 {
+  color: var(--gold);
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar li {
+  list-style: none;
+}
