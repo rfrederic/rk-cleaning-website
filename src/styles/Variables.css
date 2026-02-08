@@ -1,0 +1,11 @@
+:root {
+  --black: #0b0b0b;
+  --dark: #141414;
+  --gold: #d4af37;
+  --gold-soft: #e6c96f;
+  --white: #ffffff;
+  --gray: #cccccc;
+
+  --radius: 10px;
+  --transition: all 0.3s ease;
+}

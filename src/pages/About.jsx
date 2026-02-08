@@ -4,8 +4,8 @@ export default function About() {
       <h1 style={{ color: "var(--gold)" }}>About R&K Cleaning Services</h1>
       <p>
         R&K Cleaning Services LLC is a professional cleaning company based in
-        Miami, Florida. We specialize in residential, commercial, and deep
-        cleaning services.
+        Dayton Beach, Florida. We specialize in residential, commercial, and
+        deep cleaning services.
       </p>
       <p>
         Our mission is simple: deliver spotless results, reliable service, and

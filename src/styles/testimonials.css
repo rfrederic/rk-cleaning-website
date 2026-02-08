@@ -1,0 +1,29 @@
+:root {
+  --black: #0b0b0b;
+  --dark: #141414;
+  --gold: #d4af37;
+  --gold-soft: #e6c96f;
+  --white: #ffffff;
+  --gray: #f4f4f4;
+
+  --radius: 10px;
+  --transition: all 0.3s ease;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: "Playfair Display", serif;
+}
+
+.testimonials {
+  padding: 4rem;
+}
+
+.testimonials h2 {
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.testimonial-card {
+  background-color: var(--dark);
+  padding: 1.5rem;
+  border-left: 4px solid var(--gold);
+  margin-bottom: 1rem;
+}

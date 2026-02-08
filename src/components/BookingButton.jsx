@@ -1,3 +1,5 @@
+import "../styles/bookingButton.css";
+
 export default function BookingButton() {
   return (
     <a

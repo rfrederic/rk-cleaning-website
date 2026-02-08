@@ -1,20 +1,29 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  background: var(--black);
+  align-items: center;
+  background-color: var(--black);
   border-bottom: 1px solid var(--gold);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-.navbar h2 {
-  color: var(--gold);
+.nav__logo {
+  width: 89px;
+  height: 40px;
+  margin-right: 24px;
 }
 
 .navbar ul {
   display: flex;
-  gap: 1.5rem;
+  list-style: none;
+  gap: 2rem;
 }
 
-.navbar li {
-  list-style: none;
+.navbar a {
+  color: var(--white);
+  transition: var(--transition);
+}
+
+.navbar a:hover {
+  color: var(--gold);
 }

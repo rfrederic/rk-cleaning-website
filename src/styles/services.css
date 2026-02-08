@@ -1,0 +1,23 @@
+.services-preview {
+  padding: 4rem;
+  background-color: var(--dark);
+}
+
+.services-preview h2 {
+  color: var(--gold);
+  margin-bottom: 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.services-grid div {
+  background-color: var(--black);
+  padding: 2rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--gold);
+  text-align: center;
+}

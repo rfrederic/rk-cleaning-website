@@ -1,0 +1,30 @@
+.floating-actions {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 999;
+}
+
+.call-btn,
+.whatsapp-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+
+.call-btn {
+  background: black;
+}
+
+.whatsapp-btn {
+  background: #25d366;
+}

@@ -1,70 +1,131 @@
+/* ===========================
+   Variables
+=========================== */
 :root {
-  --black: #0b0b0b;
-  --gold: #d4af37;
+  --black: #121212;
   --white: #ffffff;
+  --gold: #ffd700;
+  --dark: #1a1a1a;
+  --transition: 0.3s ease;
+  --font-body: "Roboto", sans-serif;
+  --font-heading: "Montserrat", sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+/* ===========================
+     Global Reset / Base
+  =========================== */
+html {
+  scroll-behavior: smooth;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background-color: var(--black);
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--black);
   color: var(--white);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin: 0 0 1rem 0;
 }
 
 a {
+  color: var(--gold);
   text-decoration: none;
-  color: inherit;
+  transition: var(--transition);
 }
 
+a:hover {
+  color: var(--white);
+}
+
+/* ===========================
+     Layout / Sections
+  =========================== */
+section {
+  padding: 4rem 2rem;
+}
+
+/* ===========================
+     Buttons
+  =========================== */
 button {
+  font-family: var(--font-body);
   cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6em 1.2em;
+  background: var(--gold);
+  color: var(--black);
+  transition: var(--transition);
 }
 
-.booking-btn {
-  background-color: var(--gold);
-  color: var(--black);
-  padding: 0.8rem 1.5rem;
-  font-weight: bold;
+button:hover {
+  background: var(--white);
+  color: var(--gold);
 }
+
+/* ===========================
+     Images
+  =========================== */
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  border-style: none;
+}
+
+/* ===========================
+     Forms
+  =========================== */
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
 input,
 textarea {
   width: 100%;
-  padding: 0.8rem;
-  margin: 0.5rem 0;
+  padding: 0.8em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  background: #f9f9f9;
+  color: #000;
+  box-sizing: border-box;
+  transition: var(--transition);
 }
-input[type="submit"] {
-  background-color: var(--gold);
-  color: var(--black);
-  border: none;
-  font-weight: bold;
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--gold);
 }
-input[type="submit"]:hover {
-  background-color: #c19d32;
-}
-.section {
-  padding: 4rem 2rem;
-}
-.section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  color: var(--gold);
-}
-.section p {
-  max-width: 800px;
-  margin: 0 auto 2rem auto;
-  line-height: 1.6;
-  font-size: 1.1rem;
-}
+
+/* ===========================
+     Utility Classes
+  =========================== */
 .container {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 0 1rem;
 }
+
 .text-center {
   text-align: center;
 }

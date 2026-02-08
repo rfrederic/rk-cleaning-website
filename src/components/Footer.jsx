@@ -1,8 +1,10 @@
+import "../styles/footer.css";
+
 export default function Footer() {
   return (
-    <footer style={{ textAlign: "center", padding: "1.5rem" }}>
+    <footer className="footer">
       <p>© {new Date().getFullYear()} R&K Cleaning Services LLC</p>
-      <p>Miami, Florida</p>
+      <p>Daytona Beach, Florida</p>
     </footer>
   );
 }
