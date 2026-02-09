@@ -10,6 +10,7 @@ export default function ServicesPreview() {
         <div>Deep Cleaning</div>
         <div>Airbnb Cleaning</div>
         <div>Post-Construction</div>
+        <div>Move In | Move Out</div>
       </div>
     </section>
   );

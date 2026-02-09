@@ -21,3 +21,12 @@
   border: 1px solid var(--gold);
   text-align: center;
 }
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+
+  .services-section {
+    padding: 2rem 1rem;
+  }
+}

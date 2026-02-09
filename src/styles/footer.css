@@ -5,3 +5,9 @@ footer {
   text-align: center;
   color: var(--gray);
 }
+
+@media (max-width: 768px) {
+  .footer p {
+    margin: 0.5rem 0;
+  }
+}

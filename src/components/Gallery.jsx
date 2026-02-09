@@ -1,6 +1,9 @@
 import before1 from "../assets/before1.JPG";
 import before2 from "../assets/before2.JPG";
 import before3 from "../assets/before3.JPG";
+import photo1 from "../assets/photo-1.jpg";
+import photo2 from "../assets/photo-2.jpeg";
+
 import "../styles/Variables.css";
 import "../styles/Gallery.css";
 import React from "react";
@@ -13,9 +16,11 @@ export default function Gallery() {
       <div
         style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}
       >
-        <img src={before1} alt="Before cleaning" />
         <img src={before2} alt="After cleaning" />
         <img src={before3} alt="After cleaning" />
+        <img src={photo1} alt="After cleaning" />
+        <img src={photo2} alt="After cleaning" />
+        <img src={before1} alt="Before cleaning" />
       </div>
     </section>
   );

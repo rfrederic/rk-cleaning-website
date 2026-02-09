@@ -11,6 +11,7 @@ export default function FloatingActions() {
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-btn"
+        aria-label="Chat on WhatsApp"
       >
         💬
       </a>
