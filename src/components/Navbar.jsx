@@ -16,7 +16,7 @@ export default function Navbar() {
         ☰
       </button>
 
-      <ul className={`nav__links ${isOpen ? "open" : ""}`}>
+      <ul className={`nav__links ${isOpen ? "nav__links--open" : ""}`}>
         <li>
           <Link to="/" onClick={() => setIsOpen(false)}>
             Home

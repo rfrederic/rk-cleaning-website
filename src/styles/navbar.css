@@ -69,7 +69,7 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .nav__toggle {
-    display: block; /* show the 3-dot button */
+    display: block;
   }
 
   .nav__links {
