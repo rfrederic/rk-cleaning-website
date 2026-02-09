@@ -5,7 +5,7 @@ import photo1 from "../assets/photo-1.jpg";
 import photo2 from "../assets/photo-2.jpeg";
 
 import "../styles/Variables.css";
-import "../styles/Gallery.css";
+import "../styles/gallery.css";
 import React from "react";
 
 export default function Gallery() {
