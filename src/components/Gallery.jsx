@@ -1,6 +1,6 @@
-import before1 from "../assets/before1.JPG";
-import before2 from "../assets/before2.JPG";
-import before3 from "../assets/before3.JPG";
+import before1 from "../assets/before1.jpg";
+import before2 from "../assets/before2.jpg";
+import before3 from "../assets/before3.jpg";
 import photo1 from "../assets/photo-1.jpg";
 import photo2 from "../assets/photo-2.jpeg";
 
