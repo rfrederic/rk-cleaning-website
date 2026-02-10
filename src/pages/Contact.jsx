@@ -35,6 +35,7 @@ export default function Contact() {
       <form onSubmit={sendEmail}>
         <input
           name="name"
+          autoComplete="name"
           value={form.name}
           onChange={handleChange}
           placeholder="Name"
@@ -49,19 +50,12 @@ export default function Contact() {
         />
         <textarea
           name="message"
+          autoComplete="off"
           value={form.message}
           onChange={handleChange}
           placeholder="Message"
           rows="5"
         />
-        <iframe
-          title="Google Reviews"
-          src="https://www.google.com/maps/embed?pb=YOUR_EMBED_CODE"
-          width="100%"
-          height="300"
-          style={{ border: 0 }}
-          loading="lazy"
-        ></iframe>
         <button className="booking-btn">Send Message</button>
       </form>
     </section>
