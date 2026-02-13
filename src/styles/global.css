@@ -137,6 +137,26 @@ textarea:focus {
   margin-right: auto;
 }
 
+/* ===========================
+   Fix ZenMaid Form Styling
+=========================== */
+
+.zenmaid-container input,
+.zenmaid-container textarea,
+.zenmaid-container select {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+.zenmaid-container label {
+  color: #000000 !important;
+}
+
+.zenmaid-container .error,
+.zenmaid-container .field-error {
+  color: red !important;
+}
+
 @media (max-width: 768px) {
   section {
     padding: 3rem 1rem;
