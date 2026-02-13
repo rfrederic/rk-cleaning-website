@@ -162,7 +162,7 @@ textarea:focus {
 .zenmaid-container textarea::placeholder,
 #zenmaid-booking-form input::placeholder,
 #zenmaid-booking-form textarea::placeholder {
-  color: #6b6b6b !important;
+  color: #000000 !important;
   opacity: 1 !important;
 }
 
