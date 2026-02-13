@@ -129,6 +129,13 @@ textarea:focus {
 .text-center {
   text-align: center;
 }
+/* Add last */
+.services-preview > *,
+.testimonials > * {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 @media (max-width: 768px) {
   section {

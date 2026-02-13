@@ -1,5 +1,5 @@
-import emailjs from "emailjs-com";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "../styles/contact.css";
 
 export default function Contact() {
@@ -9,23 +9,39 @@ export default function Contact() {
     message: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    emailjs
-      .send("service_5x8j9cr", "template_cthivqi", form, "YdeHq_KLUJPEkRm3I")
-      .then(() => {
-        alert("Message sent successfully!");
-        setForm({ name: "", email: "", message: "" });
-      })
-      .catch((err) => {
-        alert("Something went wrong.");
-        console.error(err);
-      });
+    try {
+      const result = await emailjs.send(
+        "service_5x8j9cr",
+        "template_cthivqi",
+        {
+          from_name: form.name,
+          reply_to: form.email,
+          message: form.message,
+        },
+        "YdeHq_KLUJPEkRm3I"
+      );
+
+      console.log("EmailJS success:", result);
+      alert("Message sent successfully!");
+      setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      alert(
+        `Something went wrong: ${err?.text || err?.message || "Unknown error"}`
+      );
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -43,6 +59,8 @@ export default function Contact() {
         />
         <input
           name="email"
+          type="email"
+          autoComplete="email"
           value={form.email}
           onChange={handleChange}
           placeholder="Email"
@@ -55,8 +73,11 @@ export default function Contact() {
           onChange={handleChange}
           placeholder="Message"
           rows="5"
+          required
         />
-        <button className="booking-btn">Send Message</button>
+        <button className="booking-btn" type="submit" disabled={loading}>
+          {loading ? "Sending..." : "Send Message"}
+        </button>
       </form>
     </section>
   );
