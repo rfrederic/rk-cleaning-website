@@ -140,21 +140,53 @@ textarea:focus {
 /* ===========================
    Fix ZenMaid Form Styling
 =========================== */
+.zenmaid-container,
+#zenmaid-booking-form {
+  color: #111 !important;
+}
 
+/* Inputs / selects / textarea */
 .zenmaid-container input,
 .zenmaid-container textarea,
-.zenmaid-container select {
-  background-color: #ffffff !important;
-  color: #000000 !important;
+.zenmaid-container select,
+#zenmaid-booking-form input,
+#zenmaid-booking-form textarea,
+#zenmaid-booking-form select {
+  background: #fff !important;
+  color: #111 !important;
+  border: 1px solid #cfcfcf !important;
 }
 
-.zenmaid-container label {
-  color: #000000 !important;
+/* Placeholder text */
+.zenmaid-container input::placeholder,
+.zenmaid-container textarea::placeholder,
+#zenmaid-booking-form input::placeholder,
+#zenmaid-booking-form textarea::placeholder {
+  color: #6b6b6b !important;
+  opacity: 1 !important;
 }
 
+/* Labels / titles */
+.zenmaid-container label,
+#zenmaid-booking-form label,
+.zenmaid-container h1,
+.zenmaid-container h2,
+.zenmaid-container h3,
+#zenmaid-booking-form h1,
+#zenmaid-booking-form h2,
+#zenmaid-booking-form h3 {
+  color: #111 !important;
+}
+
+/* Error message text */
 .zenmaid-container .error,
-.zenmaid-container .field-error {
-  color: red !important;
+.zenmaid-container .field-error,
+.zenmaid-container [class*="error"],
+#zenmaid-booking-form .error,
+#zenmaid-booking-form .field-error,
+#zenmaid-booking-form [class*="error"] {
+  color: #d11 !important;
+  font-weight: 600 !important;
 }
 
 @media (max-width: 768px) {
