@@ -12,8 +12,8 @@
 }
 
 /* ===========================
-     Global Reset / Base
-  =========================== */
+   Global Reset / Base
+=========================== */
 html {
   scroll-behavior: smooth;
   line-height: 1.15;
@@ -52,15 +52,21 @@ a:hover {
 }
 
 /* ===========================
-     Layout / Sections
-  =========================== */
+   Layout / Sections
+=========================== */
 section {
   padding: 4rem 2rem;
 }
 
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 1rem;
+  }
+}
+
 /* ===========================
-     Buttons
-  =========================== */
+   Buttons
+=========================== */
 button {
   font-family: var(--font-body);
   cursor: pointer;
@@ -73,13 +79,12 @@ button {
 }
 
 button:hover {
-  /* background: var(--white); */
   color: var(--gold);
 }
 
 /* ===========================
-     Images
-  =========================== */
+   Images
+=========================== */
 img {
   max-width: 100%;
   display: block;
@@ -88,8 +93,9 @@ img {
 }
 
 /* ===========================
-     Forms
-  =========================== */
+   Forms (SAFE GLOBAL)
+   Only typography globally (doesn't break ZenMaid)
+=========================== */
 input,
 textarea,
 select,
@@ -98,8 +104,13 @@ button {
   font-size: 1rem;
 }
 
-input,
-textarea {
+/* ===========================
+   Forms (YOUR site only)
+   Add className="rk-form" to your forms
+=========================== */
+.rk-form input,
+.rk-form textarea,
+.rk-form select {
   width: 100%;
   padding: 0.8em;
   border-radius: 6px;
@@ -111,15 +122,16 @@ textarea {
   transition: var(--transition);
 }
 
-input:focus,
-textarea:focus {
+.rk-form input:focus,
+.rk-form textarea:focus,
+.rk-form select:focus {
   outline: none;
   border-color: var(--gold);
 }
 
 /* ===========================
-     Utility Classes
-  =========================== */
+   Utility Classes
+=========================== */
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -129,7 +141,8 @@ textarea:focus {
 .text-center {
   text-align: center;
 }
-/* Add last */
+
+/* Limit widths inside some sections */
 .services-preview > *,
 .testimonials > * {
   max-width: 1280px;
@@ -138,59 +151,39 @@ textarea:focus {
 }
 
 /* ===========================
-   Fix ZenMaid Form Styling
+   ZenMaid Protection (extra safe)
+   Prevent your theme from washing out ZenMaid fields
 =========================== */
-.zenmaid-container,
-#zenmaid-booking-form {
-  color: #111 !important;
-}
-
-/* Inputs / selects / textarea */
-.zenmaid-container input,
-.zenmaid-container textarea,
-.zenmaid-container select,
-#zenmaid-booking-form input,
-#zenmaid-booking-form textarea,
-#zenmaid-booking-form select {
+[id*="zenmaid"] input,
+[id*="zenmaid"] textarea,
+[id*="zenmaid"] select,
+[class*="zenmaid"] input,
+[class*="zenmaid"] textarea,
+[class*="zenmaid"] select {
   background: #fff !important;
   color: #111 !important;
   border: 1px solid #cfcfcf !important;
 }
 
-/* Placeholder text */
-.zenmaid-container input::placeholder,
-.zenmaid-container textarea::placeholder,
-#zenmaid-booking-form input::placeholder,
-#zenmaid-booking-form textarea::placeholder {
-  color: #000000 !important;
+[id*="zenmaid"] ::placeholder,
+[class*="zenmaid"] ::placeholder {
+  color: #666 !important;
   opacity: 1 !important;
 }
 
-/* Labels / titles */
-.zenmaid-container label,
-#zenmaid-booking-form label,
-.zenmaid-container h1,
-.zenmaid-container h2,
-.zenmaid-container h3,
-#zenmaid-booking-form h1,
-#zenmaid-booking-form h2,
-#zenmaid-booking-form h3 {
+[id*="zenmaid"] label,
+[class*="zenmaid"] label,
+[id*="zenmaid"] h1,
+[id*="zenmaid"] h2,
+[id*="zenmaid"] h3,
+[class*="zenmaid"] h1,
+[class*="zenmaid"] h2,
+[class*="zenmaid"] h3 {
   color: #111 !important;
 }
 
-/* Error message text */
-.zenmaid-container .error,
-.zenmaid-container .field-error,
-.zenmaid-container [class*="error"],
-#zenmaid-booking-form .error,
-#zenmaid-booking-form .field-error,
-#zenmaid-booking-form [class*="error"] {
+[id*="zenmaid"] [class*="error"],
+[class*="zenmaid"] [class*="error"] {
   color: #d11 !important;
   font-weight: 600 !important;
-}
-
-@media (max-width: 768px) {
-  section {
-    padding: 3rem 1rem;
-  }
 }
