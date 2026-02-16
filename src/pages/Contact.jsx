@@ -21,14 +21,14 @@ export default function Contact() {
 
     try {
       const result = await emailjs.send(
-        "service_5x8j9cr",
-        "template_cthivqi",
+        "service_erqxcer",
+        "template_xt3fbtf",
         {
-          from_name: form.name,
-          reply_to: form.email,
+          name: form.name,
+          email: form.email,
           message: form.message,
         },
-        "YdeHq_KLUJPEkRm3I"
+        "R1tKXl5os81ednjKb"
       );
 
       console.log("EmailJS success:", result);
@@ -48,7 +48,7 @@ export default function Contact() {
     <section style={{ padding: "3rem" }}>
       <h1 style={{ color: "var(--gold)" }}>Contact Us</h1>
 
-      <form onSubmit={sendEmail}>
+      <form className="rk-form" onSubmit={sendEmail}>
         <input
           name="name"
           autoComplete="name"
